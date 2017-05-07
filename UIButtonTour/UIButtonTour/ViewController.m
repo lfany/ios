@@ -26,11 +26,26 @@
 //    [btn.titleLabel setFrame:CGRectMake(0, 0, 100, 100)];
 //    btn.titleLabel.hidden = NO;
 //    btn.titleLabel.text = @"xxxx";
-    btn.titleLabel.textColor = [UIColor orangeColor];
+//    btn.titleLabel.textColor = [UIColor orangeColor];
     
-    btn.titleLabel.backgroundColor = [UIColor greenColor];
+//    btn.titleLabel.backgroundColor = [UIColor greenColor];
     
     btn.backgroundColor = [UIColor redColor];
+    
+    [self.view addSubview:btn];
+}
+
+- (void)createImagebtn {
+
+    UIButton* btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(100, 200, 100, 20);
+    btn.backgroundColor = [UIColor orangeColor];
+    
+    UIImage* icon0 = [UIImage imageNamed:@"icon0.jpeg"];
+    UIImage* icon1 = [UIImage imageNamed:@"icon1.jpeg"];
+    
+    [btn setImage:icon0 forState:UIControlStateNormal];
+    [btn setImage:icon1 forState:UIControlStateHighlighted];
     
     [self.view addSubview:btn];
 }
@@ -39,6 +54,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self createBtn];
+    [self createImagebtn];
 }
 
 
