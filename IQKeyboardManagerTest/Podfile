@@ -1,0 +1,4 @@
+platform :ios, ‘8.0’
+target ‘IQKeyboardManagerTest’ do
+pod 'IQKeyboardManager', '~> 4.0.7'
+end
